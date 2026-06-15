@@ -1,38 +1,26 @@
-# Bhavneet Singh Portfolio
+# Bhavneet Singh Advanced AI Portfolio
 
-Personal portfolio website for Bhavneet Singh.
-
-## About
-
-This portfolio highlights my experience in:
+This is the upgraded portfolio version focused on:
 
 - Full-stack development
-- ERP and business systems
-- SQL reporting and dashboards
-- Manufacturing workflow automation
-- IT support and troubleshooting
-- AI-assisted reporting concepts
+- GenAI systems
+- RAG and LLM workflows
+- LangGraph and LangChain learning direction
+- LLMOps and MLOps concepts
+- Data engineering and reporting
+- ERP intelligence platforms
+- Production-grade portfolio presentation
 
-## Tech Stack
+## Files
 
-- HTML
-- CSS
-- GitHub Pages
+- `index.html`
+- `style.css`
+- `assets/profile-photo.jpg`
 
-## Sections
+## Push commands
 
-- About
-- Featured Projects
-- Skills
-- Experience Snapshot
-- Contact
-
-## Live Site
-
-After GitHub Pages is enabled, the portfolio will be available at:
-
-https://bhavneetsingh-dev.github.io/bhavneet-portfolio/
-
-## Notes
-
-This portfolio does not include private company code, confidential customer data, database credentials, or internal business records.
+```bash
+git add .
+git commit -m "Upgrade portfolio to advanced GenAI developer design"
+git push
+```
