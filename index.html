@@ -3,392 +3,262 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bhavneet Singh | Full-Stack, ERP & Business Systems Developer</title>
-  <meta name="description" content="Bhavneet Singh portfolio: full-stack development, ERP systems, SQL reporting, manufacturing workflow automation, IT support, and AI-assisted business tools." />
+  <title>Bhavneet Singh | Full-Stack Developer & AI-Ready Systems Builder</title>
+  <meta name="description" content="Portfolio of Bhavneet Singh, Full-Stack Developer building AI-ready internal systems, ERP-connected applications, SQL reporting dashboards, automation workflows, and DevOps-ready software projects." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .portrait-card { padding: 18px; }
-    .portrait-stage {
-      position: relative;
-      min-height: 540px;
-      border-radius: 34px;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 20% 10%, rgba(0, 194, 255, 0.22), transparent 34%),
-        radial-gradient(circle at 90% 35%, rgba(255, 79, 196, 0.18), transparent 34%),
-        linear-gradient(145deg, rgba(255,255,255,0.86), rgba(255,255,255,0.45));
-      box-shadow: 0 38px 110px rgba(0,119,255,0.24);
-    }
-    .portrait-stage::before {
-      content: "";
-      position: absolute;
-      inset: 18px;
-      border-radius: 30px;
-      border: 1px solid rgba(255,255,255,0.72);
-      z-index: 2;
-      pointer-events: none;
-    }
-    .portrait-stage::after {
-      content: "";
-      position: absolute;
-      width: 360px;
-      height: 360px;
-      right: -115px;
-      top: -90px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(0,194,255,0.36), transparent 66%);
-      filter: blur(2px);
-      z-index: 1;
-    }
-    .portrait-frame {
-      position: absolute;
-      inset: 20px 20px 90px;
-      border-radius: 30px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 30px 80px rgba(7,17,31,0.18);
-      z-index: 3;
-    }
-    .portrait-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      transform: scale(1.02);
-    }
-    .portrait-badge {
-      position: absolute;
-      left: 34px;
-      right: 34px;
-      bottom: 28px;
-      z-index: 4;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 16px 18px;
-      border: 1px solid rgba(255,255,255,0.72);
-      border-radius: 24px;
-      background: rgba(255,255,255,0.78);
-      backdrop-filter: blur(20px);
-      box-shadow: 0 20px 55px rgba(7,17,31,0.12);
-    }
-    .portrait-badge strong {
-      display: block;
-      color: #07111f;
-      font-size: 1rem;
-      letter-spacing: -0.03em;
-    }
-    .portrait-badge span {
-      display: block;
-      color: #5c6b80;
-      font-size: 0.82rem;
-      font-weight: 800;
-    }
-    .availability-dot {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: #10b981;
-      box-shadow: 0 0 0 8px rgba(16,185,129,0.14), 0 0 22px rgba(16,185,129,0.55);
-      flex: 0 0 auto;
-    }
-    .floating-card {
-      position: absolute;
-      z-index: 5;
-      right: 8px;
-      top: 42px;
-      padding: 12px 14px;
-      border: 1px solid rgba(255,255,255,0.75);
-      border-radius: 18px;
-      color: #0f4aa5;
-      font-size: 0.78rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      background: rgba(255,255,255,0.84);
-      backdrop-filter: blur(20px);
-      box-shadow: 0 18px 50px rgba(0,119,255,0.18);
-      transform: rotate(4deg);
-    }
-    .impact-row {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 34px;
-      max-width: 830px;
-    }
-    .impact-row div {
-      padding: 16px;
-      border: 1px solid rgba(0,119,255,0.12);
-      border-radius: 22px;
-      background: rgba(255,255,255,0.66);
-      box-shadow: 0 18px 40px rgba(30,64,175,0.08);
-    }
-    .impact-row strong {
-      display: block;
-      color: #07111f;
-      font-size: 1.35rem;
-      line-height: 1;
-      letter-spacing: -0.06em;
-    }
-    .impact-row span {
-      display: block;
-      margin-top: 6px;
-      color: #5c6b80;
-      font-size: 0.78rem;
-      font-weight: 800;
-    }
-    @media (max-width: 980px) {
-      .portrait-stage { min-height: 620px; }
-      .impact-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 720px) {
-      .portrait-stage { min-height: 520px; }
-      .portrait-frame { inset: 16px 16px 86px; }
-      .portrait-badge { left: 24px; right: 24px; bottom: 22px; }
-      .floating-card { right: 2px; top: 30px; }
-      .impact-row { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
-  <div class="page-glow glow-one"></div>
-  <div class="page-glow glow-two"></div>
-  <div class="page-glow glow-three"></div>
+  <div class="noise"></div>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+  <div class="glow glow-c"></div>
 
   <header class="site-header">
-    <nav class="nav container">
-      <a href="#" class="logo" aria-label="Bhavneet Singh home">
-        <span class="logo-mark">BS</span>
+    <nav class="nav shell">
+      <a class="brand" href="#top" aria-label="Bhavneet Singh portfolio home">
+        <span class="brand-mark">BS</span>
         <span>Bhavneet Singh</span>
       </a>
       <div class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+        <a href="#systems">Systems</a>
+        <a href="#stack">Stack</a>
         <a href="#experience">Experience</a>
+        <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero container" id="top">
-      <div class="hero-copy">
-        <div class="status-pill">
-          <span class="pulse"></span>
-          Open to Full-Stack, ERP, Implementation, IT Support & SQL Reporting roles
+  <main id="top">
+    <section class="hero shell">
+      <aside class="profile-card" aria-label="Bhavneet Singh profile card">
+        <div class="profile-ring"></div>
+        <div class="profile-image-wrap">
+          <img src="assets/profile-photo.svg" alt="Professional portrait of Bhavneet Singh" class="profile-image" />
+          <span class="status-chip">AI-ready systems</span>
         </div>
-        <p class="eyebrow">Developer + Business Systems + Manufacturing Operations</p>
-        <h1>Building bright, practical software for real business operations.</h1>
-        <p class="hero-text">
-          I’m a Full-Stack Developer and Business Systems Developer based in Mississauga, Ontario. I build internal web applications,
-          ERP-connected reporting tools, SQL dashboards, QR/scan workflows, and AI-assisted automation concepts for manufacturing,
-          shipping, QA, scheduling, finance, and IT users.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#projects">View Featured Projects</a>
-          <a class="btn" href="mailto:bhavneetsingh2806@gmail.com?subject=Opportunity%20for%20Bhavneet%20Singh">Contact Me</a>
-          <a class="btn ghost" href="https://github.com/bhavneetsingh-dev" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/bhavneet-singh-695ba42b6/" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-        <div class="impact-row" aria-label="Portfolio impact highlights">
-          <div><strong>ERP</strong><span>Data workflows</span></div>
-          <div><strong>SQL</strong><span>Reports & dashboards</span></div>
-          <div><strong>Web</strong><span>Internal apps</span></div>
-          <div><strong>IT</strong><span>User/system support</span></div>
-        </div>
-      </div>
-
-      <aside class="hero-card portrait-card" aria-label="Professional portrait and profile highlights">
-        <div class="orbit-ring"></div>
-        <div class="portrait-stage">
-          <div class="floating-card">AI-ready systems</div>
-          <div class="portrait-frame">
-            <img src="assets/profile-photo.svg" alt="Professional portrait of Bhavneet Singh" />
+        <div class="profile-bottom">
+          <div>
+            <h2>Bhavneet Singh</h2>
+            <p>Full-Stack Developer</p>
           </div>
-          <div class="portrait-badge">
-            <div>
-              <strong>Bhavneet Singh</strong>
-              <span>Full-Stack • ERP • SQL • IT Systems</span>
-            </div>
-            <div class="availability-dot" aria-hidden="true"></div>
-          </div>
+          <span class="live-dot" aria-hidden="true"></span>
+        </div>
+        <p class="profile-line">Building internal applications, AI-assisted reporting, ERP-connected workflows, and production-grade dashboards.</p>
+        <div class="social-row" aria-label="Profile links">
+          <a href="mailto:bhavneetsingh2806@gmail.com" aria-label="Email Bhavneet">Email</a>
+          <a href="https://github.com/bhavneetsingh-dev" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/bhavneet-singh-695ba42b6/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </aside>
-    </section>
 
-    <section class="logo-strip" aria-label="Core strengths">
-      <div class="strip-track">
-        <span>PHP</span><span>JavaScript</span><span>MySQL</span><span>PostgreSQL</span><span>SQL Reporting</span><span>ERP Workflows</span><span>GitHub</span><span>Microsoft 365</span><span>Windows Support</span><span>AI Automation</span>
+      <div class="hero-copy">
+        <p class="kicker">Software Engineering • AI Systems • ERP Automation</p>
+        <h1><span>FULL-STACK</span><strong>DEVELOPER</strong></h1>
+        <p class="hero-lede">
+          I build business-critical web applications that connect users, databases, ERP workflows, AI-assisted reporting, and operational decision-making into one clean system.
+        </p>
+        <div class="hero-stats">
+          <div><strong>10+</strong><span>internal tools / workflows</span></div>
+          <div><strong>AI</strong><span>RAG, agents, LLaMA-ready concepts</span></div>
+          <div><strong>ERP</strong><span>production, shipping, finance data</span></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn primary" href="#systems">View Systems</a>
+          <a class="btn" href="#stack">Tech Stack</a>
+          <a class="btn ghost" href="mailto:bhavneetsingh2806@gmail.com?subject=Request%20for%20Bhavneet%20Singh%20Resume">Request Resume</a>
+        </div>
       </div>
     </section>
 
-    <section class="section container" id="work">
-      <div class="section-kicker">What I bring</div>
-      <div class="split-heading">
-        <h2>Not just coding — I understand the business workflow behind the software.</h2>
+    <section class="marquee" aria-label="Core technologies">
+      <div class="marquee-track">
+        <span>JavaScript</span><span>PHP</span><span>React</span><span>Python</span><span>SQL</span><span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>REST APIs</span><span>LangChain</span><span>RAG</span><span>LLaMA</span><span>AI Agents</span><span>Docker</span><span>GitHub</span><span>Azure</span><span>Cybersecurity Basics</span><span>DevOps Ready</span>
+      </div>
+    </section>
+
+    <section class="section shell intro-section">
+      <p class="kicker">What I create</p>
+      <div class="section-head two-col">
+        <h2>Systems that look clean on the front end and solve real workflow problems behind the scenes.</h2>
         <p>
-          My advantage is a hybrid background: I have worked directly around manufacturing operations and now build software that supports real users, real data, and real process gaps.
+          My work sits between software development, ERP data, AI reporting, operations, and IT support. I focus on practical systems: dashboards, forms, APIs, automation, validation, user workflows, SQL reports, and AI-ready architecture.
         </p>
       </div>
-      <div class="value-grid">
-        <article class="value-card">
-          <span class="icon-bubble">01</span>
-          <h3>Full-Stack Business Apps</h3>
-          <p>Database-backed internal tools with dashboards, forms, search filters, role-based screens, validation, and user-friendly workflows.</p>
+      <div class="capability-grid">
+        <article>
+          <span>01</span>
+          <h3>Full-Stack Applications</h3>
+          <p>Responsive interfaces, secure forms, search/filter dashboards, backend logic, sessions, validation, file uploads, exports, and user-focused workflows.</p>
         </article>
-        <article class="value-card">
-          <span class="icon-bubble">02</span>
-          <h3>ERP & SQL Reporting</h3>
-          <p>Ticket, sales order, customer PO, inventory, production, shipping, and finance reporting views built around SQL and operational data.</p>
+        <article>
+          <span>02</span>
+          <h3>AI-Integrated Reporting</h3>
+          <p>RAG-style report concepts, SQL-context retrieval, prompt workflows, LLaMA/LangChain-ready design, and AI-assisted business intelligence.</p>
         </article>
-        <article class="value-card">
-          <span class="icon-bubble">03</span>
-          <h3>Operations + IT Support</h3>
-          <p>Hands-on support for users, Windows environments, Microsoft 365, RDP, printers, scanners, QR/barcode workflows, and vendor escalations.</p>
+        <article>
+          <span>03</span>
+          <h3>ERP-Connected Tools</h3>
+          <p>Ticket, sales order, customer PO, part number, inventory, production, shipping, finance, QA, and scheduling visibility from operational data.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Secure & Supportable Systems</h3>
+          <p>Role-based screens, input sanitization, duplicate prevention, access checks, documentation, troubleshooting, DevOps readiness, and security-conscious design.</p>
         </article>
       </div>
     </section>
 
-    <section class="section container" id="projects">
-      <div class="section-kicker">Featured systems</div>
-      <div class="split-heading">
-        <h2>Project case studies built around real operational problems.</h2>
-        <p>Public descriptions are sanitized and do not include private company code, customer data, credentials, internal screenshots, or confidential records.</p>
+    <section class="section shell" id="systems">
+      <p class="kicker">Featured systems</p>
+      <div class="section-head two-col">
+        <h2>Advanced project portfolio built from real business problems.</h2>
+        <p>Descriptions are public-safe and sanitized. No private company code, customer data, credentials, internal screenshots, or confidential records are included.</p>
       </div>
 
-      <div class="project-grid">
-        <article class="project-card featured-card">
-          <div class="card-topline"><span>Flagship Project</span><span>PHP • MySQL • QR</span></div>
+      <div class="systems-grid">
+        <article class="system-card flagship">
+          <div class="card-meta"><span>Flagship AI + ERP system</span><span>SQL • RAG • Dashboards</span></div>
+          <h3>AI-Integrated ERP Intelligence Platform</h3>
+          <p>
+            A business reporting concept that connects ERP/data warehouse context with SQL reporting, department-specific prompts, AI agents, and RAG-style retrieval to produce finance, inventory, production, margin, KPI, and operations reports faster.
+          </p>
+          <div class="architecture-line">
+            <span>ERP Data</span><i></i><span>SQL Context</span><i></i><span>RAG Layer</span><i></i><span>AI Reports</span>
+          </div>
+          <div class="chips">
+            <span>LangChain-ready</span><span>LLaMA concepts</span><span>Vector search ready</span><span>Prompt workflows</span><span>Report automation</span>
+          </div>
+        </article>
+
+        <article class="system-card neon-red">
+          <div class="card-meta"><span>Traceability</span><span>PHP • MySQL • QR</span></div>
           <h3>Manufacturing Traceability & QR Workflow System</h3>
-          <p>
-            A scan-based workflow system concept for roll, carton, skid, transfer, and shipping traceability with duplicate prevention,
-            product validation, searchable records, and audit-friendly status tracking.
-          </p>
-          <div class="tag-row"><span>QR Parsing</span><span>Validation</span><span>Shipping Visibility</span><span>Traceability</span></div>
+          <p>Scan-based system for roll, carton, skid, transfer, finishing, and shipping visibility with QR parsing, duplicate prevention, mismatch validation, and searchable operational history.</p>
+          <div class="chips"><span>QR scanning</span><span>Validation</span><span>Audit records</span><span>Shipping visibility</span></div>
         </article>
 
-        <article class="project-card">
-          <div class="card-topline"><span>ERP Reporting</span><span>SQL • PostgreSQL</span></div>
-          <h3>ERP Reporting Dashboard</h3>
-          <p>
-            SQL-driven reporting views for ERP-style ticket, customer PO, sales order, part number, production, inventory, shipping,
-            and finance visibility.
-          </p>
-          <div class="tag-row"><span>Dashboards</span><span>KPI Reports</span><span>Data Validation</span></div>
+        <article class="system-card neon-green">
+          <div class="card-meta"><span>Scheduling</span><span>Admin • Employee • KPI</span></div>
+          <h3>Press Job Scheduling & Production Control</h3>
+          <p>Scheduling system concept replacing spreadsheet/manual tracking with job status, machine filters, operator sign-off, QR ticket lookup, rush flags, date views, and management dashboards.</p>
+          <div class="chips"><span>Operations UI</span><span>Progress tracking</span><span>Management KPIs</span></div>
         </article>
 
-        <article class="project-card">
-          <div class="card-topline"><span>AI Concept</span><span>LLM • SQL Context</span></div>
-          <h3>AI-Powered SQL Report Generator</h3>
-          <p>
-            A controlled AI-assisted reporting concept using structured prompts, SQL context, and business logic to generate operational,
-            finance, inventory, and KPI report drafts.
-          </p>
-          <div class="tag-row"><span>RAG Concepts</span><span>Prompt Design</span><span>BI Automation</span></div>
-        </article>
-
-        <article class="project-card">
-          <div class="card-topline"><span>Support Ops</span><span>IT • Systems</span></div>
-          <h3>IT Support & Operations Dashboard</h3>
-          <p>
-            A support visibility dashboard concept for user issues, system checks, access requests, network incidents, documentation,
-            and vendor escalation tracking.
-          </p>
-          <div class="tag-row"><span>Incident Triage</span><span>Documentation</span><span>Root Cause</span></div>
+        <article class="system-card neon-blue">
+          <div class="card-meta"><span>QA Automation</span><span>Forms • Locking • Review</span></div>
+          <h3>Online Forms & QA Sign-Off Portal</h3>
+          <p>Digitized quality forms with save/lock logic, QA review pages, password-protected edits, operator toggles, ticket search, ERP-prefill readiness, and consistent record formatting.</p>
+          <div class="chips"><span>Form automation</span><span>Role logic</span><span>QA workflows</span></div>
         </article>
       </div>
     </section>
 
-    <section class="section container" id="skills">
-      <div class="section-kicker">Technical toolkit</div>
-      <div class="split-heading">
-        <h2>Skills grouped the way hiring teams actually search.</h2>
-        <p>My profile fits hybrid roles that need software delivery, data/reporting, ERP process knowledge, and user-facing technical support.</p>
-      </div>
-      <div class="skills-panel">
-        <div class="skill-group">
-          <h3>Development</h3>
-          <div class="chips"><span>PHP</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>React Fundamentals</span><span>REST APIs</span><span>JSON</span><span>Git</span></div>
-        </div>
-        <div class="skill-group">
-          <h3>Data & Reporting</h3>
-          <div class="chips"><span>SQL</span><span>MySQL</span><span>PostgreSQL</span><span>Dashboards</span><span>Reporting Views</span><span>Data Validation</span><span>KPI Reporting</span></div>
-        </div>
-        <div class="skill-group">
-          <h3>Business Systems</h3>
-          <div class="chips"><span>ERP Workflows</span><span>Manufacturing Systems</span><span>Traceability</span><span>Scheduling</span><span>Shipping</span><span>Inventory</span><span>QA Workflows</span></div>
-        </div>
-        <div class="skill-group">
-          <h3>IT & Support</h3>
-          <div class="chips"><span>Windows</span><span>Microsoft 365</span><span>MFA</span><span>RDP</span><span>Printers/Scanners</span><span>Networking Basics</span><span>Documentation</span></div>
-        </div>
+    <section class="section shell lab-section">
+      <p class="kicker">System architecture glimpse</p>
+      <div class="terminal-board">
+        <div class="terminal-top"><span></span><span></span><span></span><strong>portfolio/system-map.ts</strong></div>
+        <pre><code>const builder = {
+  role: "Full-Stack Developer",
+  focus: ["AI-ready applications", "ERP-connected tools", "SQL reporting", "workflow automation"],
+  frontend: ["JavaScript", "React-style UI", "HTML", "CSS", "responsive dashboards"],
+  backend: ["PHP", "Python automation", "REST APIs", "validation logic", "role-based access"],
+  data: ["SQL", "MySQL", "PostgreSQL", "MongoDB concepts", "reporting schemas"],
+  ai: ["RAG", "LangChain", "LLaMA-ready workflows", "AI agents", "prompt engineering"],
+  delivery: ["Git", "GitHub", "documentation", "testing", "DevOps-ready structure"]
+};</code></pre>
       </div>
     </section>
 
-    <section class="section container" id="experience">
-      <div class="section-kicker">Experience snapshot</div>
-      <div class="timeline-wrap">
-        <article class="timeline-item current">
-          <div class="timeline-dot"></div>
-          <p class="date">September 2024 — Present</p>
-          <h3>Full-Stack Developer / IT Systems Administrator / Business Systems Engineer</h3>
-          <p class="company">Helix Packaging Inc. / Helix Impressions Inc. • Mississauga, ON</p>
+    <section class="section shell" id="stack">
+      <p class="kicker">Technical stack</p>
+      <div class="section-head centered">
+        <h2>Engineering toolkit across web, data, AI, DevOps, and support.</h2>
+        <p>SQL, MySQL, PostgreSQL, and MongoDB are treated as part of the technical skillset — not the whole brand. The main brand is full-stack + AI-ready systems.</p>
+      </div>
+
+      <div class="tech-cloud">
+        <div class="tech-card"><b>JS</b><span>JavaScript</span></div>
+        <div class="tech-card"><b>PHP</b><span>PHP</span></div>
+        <div class="tech-card"><b>PY</b><span>Python</span></div>
+        <div class="tech-card"><b>R</b><span>React</span></div>
+        <div class="tech-card"><b>API</b><span>REST APIs</span></div>
+        <div class="tech-card"><b>SQL</b><span>SQL</span></div>
+        <div class="tech-card"><b>MY</b><span>MySQL</span></div>
+        <div class="tech-card"><b>PG</b><span>PostgreSQL</span></div>
+        <div class="tech-card"><b>MDB</b><span>MongoDB</span></div>
+        <div class="tech-card"><b>LC</b><span>LangChain</span></div>
+        <div class="tech-card"><b>RAG</b><span>RAG</span></div>
+        <div class="tech-card"><b>LLM</b><span>LLaMA / LLMs</span></div>
+        <div class="tech-card"><b>AG</b><span>AI Agents</span></div>
+        <div class="tech-card"><b>GH</b><span>GitHub</span></div>
+        <div class="tech-card"><b>DK</b><span>Docker</span></div>
+        <div class="tech-card"><b>AZ</b><span>Azure</span></div>
+        <div class="tech-card"><b>UX</b><span>UI/UX</span></div>
+        <div class="tech-card"><b>SEC</b><span>Security Basics</span></div>
+        <div class="tech-card"><b>M365</b><span>Microsoft 365</span></div>
+        <div class="tech-card"><b>WIN</b><span>Windows / RDP</span></div>
+        <div class="tech-card"><b>QA</b><span>Testing / UAT</span></div>
+        <div class="tech-card"><b>DOC</b><span>Documentation</span></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="experience">
+      <p class="kicker">Experience</p>
+      <div class="experience-card">
+        <div class="exp-left">
+          <span class="date">Feb 2023 — Present</span>
+          <h2>Full-Stack Developer</h2>
+          <p>Helix Packaging Inc. / Helix Impressions Inc. • Mississauga, Ontario</p>
+        </div>
+        <div class="exp-right">
           <p>
-            Build and support internal applications, ERP-connected reports, SQL dashboards, traceability tools, IT support workflows,
-            user documentation, and AI-assisted automation concepts for manufacturing operations.
+            Build and support internal software systems used across production, shipping, QA, scheduling, finance, management, and IT. My work combines front-end interfaces, backend logic, SQL-driven reports, ERP-connected workflows, system troubleshooting, documentation, and user training.
           </p>
-        </article>
-        <article class="timeline-item">
-          <div class="timeline-dot"></div>
-          <p class="date">February 2023 — September 2024</p>
-          <h3>Production / Packing / Machine Operation Background</h3>
-          <p class="company">Helix Packaging Inc. / Helix Impressions Inc.</p>
-          <p>
-            Gained first-hand understanding of tickets, customer POs, production flow, packing, skids, labels, shipping, quality checks,
-            operator pain points, and practical workflow constraints.
-          </p>
-        </article>
+          <ul>
+            <li>Develop database-backed web applications with PHP, JavaScript, MySQL, PostgreSQL, SQL, QR scanning, forms, dashboards, filters, validation, and reporting logic.</li>
+            <li>Design AI-ready reporting workflows using SQL context, RAG-style architecture, prompt structures, and agent-based reporting concepts for operational and financial visibility.</li>
+            <li>Connect business workflows around tickets, sales orders, customer POs, part numbers, inventory, production status, shipping, QA sign-offs, and management KPIs.</li>
+            <li>Apply secure and supportable practices including role-based screens, input validation, duplicate prevention, error handling, controlled records, documentation, and user training.</li>
+            <li>Support IT/system issues across Microsoft 365, Windows environments, RDP access, printers, scanners, QR devices, local servers, network basics, and vendor escalations.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <section class="section container role-section">
-      <div class="section-kicker">Target roles</div>
-      <h2>Roles where my background is strongest.</h2>
-      <div class="role-grid">
-        <span>Full-Stack Developer</span>
-        <span>Business Systems Developer</span>
-        <span>ERP Analyst</span>
-        <span>Implementation Consultant</span>
-        <span>Application Support Analyst</span>
-        <span>IT Support Engineer</span>
-        <span>SQL Reporting Analyst</span>
-        <span>Solutions Engineer</span>
+    <section class="section shell" id="resume">
+      <p class="kicker">Resume focus</p>
+      <div class="section-head two-col">
+        <h2>Positioned for full-stack, AI application, ERP systems, and implementation roles.</h2>
+        <p>This portfolio supports multiple job tracks without making the homepage look scattered. Recruiters can see the full-stack foundation first, then the AI, ERP, data, DevOps, and support layers underneath.</p>
+      </div>
+      <div class="resume-grid">
+        <article><h3>Full-Stack Developer</h3><p>JavaScript, PHP, React-style UI, APIs, backend logic, dashboards, forms, and production-ready web tools.</p></article>
+        <article><h3>AI Application Developer</h3><p>RAG concepts, LLaMA/LangChain-ready workflows, AI report generation, agents, prompt design, and business automation.</p></article>
+        <article><h3>ERP / Business Systems</h3><p>Operational workflows, data validation, SQL reporting, stakeholder requirements, user training, testing, and documentation.</p></article>
+        <article><h3>DevOps / Support Ready</h3><p>GitHub, deployment awareness, troubleshooting, access control, system documentation, cybersecurity basics, and IT support mindset.</p></article>
       </div>
     </section>
 
-    <section class="container final-cta" id="contact">
+    <section class="final-cta shell" id="contact">
       <div>
-        <p class="section-kicker">Let’s connect</p>
-        <h2>Need someone who can understand users, systems, data, and code?</h2>
-        <p>I’m open to opportunities where I can build, support, and improve practical business technology.</p>
+        <p class="kicker">Let’s connect</p>
+        <h2>Looking for roles where I can build useful software, automate business workflows, and grow deeper into AI engineering.</h2>
+        <p>Open to Full-Stack Developer, AI Application Developer, ERP / Business Systems, Implementation Consultant, Application Support, and Technical Support roles.</p>
       </div>
       <div class="cta-actions">
         <a class="btn primary" href="mailto:bhavneetsingh2806@gmail.com?subject=Opportunity%20for%20Bhavneet%20Singh">Email Me</a>
-        <a class="btn" href="https://www.linkedin.com/in/bhavneet-singh-695ba42b6/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/bhavneetsingh-dev" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/bhavneet-singh-695ba42b6/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2026 Bhavneet Singh. Portfolio built with HTML, CSS, GitHub, and a focus on real business systems.</p>
+    <p>© 2026 Bhavneet Singh — Full-Stack Developer building AI-ready business systems.</p>
   </footer>
 </body>
 </html>
