@@ -1,6 +1,6 @@
 # Bhavneet Singh Portfolio V3
 
-Advanced portfolio for Bhavneet Singh — Full-Stack Developer & GenAI Systems Builder.
+Portfolio for Bhavneet Singh — Full-Stack Developer & GenAI Systems Builder.
 
 ## Focus Areas
 - Full-stack application engineering
